@@ -8,6 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-
+    <div>
+        <nav class="navBar">
+            <a href="/homePage" class="navBar__link">Home</a>
+            <a href="/games" class="navBar__link">Games</a>
+            <a href="/myprofile" class="navBar__link">My Profile</a>
+            <a href="/login" class="navBar__link">Login</a>
+        </nav>
+    </div>
 </body>
 </html>
