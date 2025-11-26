@@ -1,8 +1,10 @@
 <?php
 
-USE App\Http\Controllers\sitecontroler;
+use App\Http\Controllers\sitecontroler;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JogosControler;
 
+Route::get('/games', [JogosControler::class, 'index']);
 Route::get('/', [sitecontroler::class, 'home'])->name('homePage');
 Route::get('/about', [sitecontroler::class, 'about'])->name('aboutUs');
 Route::get('/games', [sitecontroler::class, 'games'])->name('gamesPage');
