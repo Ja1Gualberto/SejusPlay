@@ -26,18 +26,20 @@ class sitecontroler extends Controller
     {
         return view('registerPage');
     }
-    public function navbar()
+    public function layout()
     {
-        return view('navbar');
+        return view('layout');
     }
     public function myprofile()
     {
         return view('myprofile');
     }
-    public function loginPage(){
+    public function loginPage()
+    {
         return view('loginPage');
     }
-    public function registerPage(){
+    public function registerPage()
+    {
         return view('registerPage');
     }
 }

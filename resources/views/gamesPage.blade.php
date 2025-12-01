@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo</title>
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/css/bootstrap.css') }}">
 </head>
 <body>
-    @include('navbar')
+    @include('layout')
 
     <div class="container mt-4">
         <h1>Catálogo</h1>
+        <p>Vivamus eget pharetra nulla. Morbi mattis rhoncus ante et vulputate. Sed vitae tellus sed nisl imperdiet pulvinar.
+        Pellentesque vel massa congue, vehicula sem sed, sollicitudin enim.</p>
 
         @if(!isset($produtos) || $produtos->isEmpty())
             <p>Nenhum jogo encontrado.</p>

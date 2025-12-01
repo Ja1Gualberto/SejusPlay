@@ -1,4 +1,4 @@
-@extends('navbar')
+@extends('layout')
 
 <!DOCTYPE html>
 <html lang="en">
