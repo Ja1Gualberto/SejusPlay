@@ -10,19 +10,28 @@
     @yield('styles')
   </head>
   <body>
-<nav class="teste">
-  <div class="layout-container">
-        <a class="logo" href="{{Route('homePage')}}"><img src="{{asset('assets/images/logoNova.png')}}" alt="" width="60px" height="60px" ></a>
+{{-- @guest --}}
+    <nav class="teste">
+        <div class="layout-container">
+            <a class="logo" href="{{Route('homePage')}}"><img src="{{asset('assets/images/logoNova.png')}}" alt="" width="60px" height="60px" ></a>
 
-        <div class="layout-links">
-            <a class="link-layout" href="{{Route('homePage')}}">Home</a>
-            <a class="link-layout" href="{{Route('gamesPage')}}">Catalogo</a>
-            <a class="link-layout" href="{{Route('aboutUs')}}">Sobre Nós</a>
-        </div>
-        <a class="link-layout-profile" href="{{Route('myProfile')}}"><img src="{{ asset('assets/images/profileicon.png') }}" alt=""></a>
+            <div class="layout-links">
+                <a class="link-layout" href="{{Route('homePage')}}">Home</a>
+                <a class="link-layout" href="{{Route('gamesPage')}}">Catalogo</a>
+                <a class="link-layout" href="{{Route('aboutUs')}}">Sobre Nós</a>
+            </div>
+{{-- @endguest --}}
+{{-- @auth --}}
+            <a class="link-layout-profile" href="{{Route('myProfile')}}"><img src="{{ asset('assets/images/profileicon.png') }}" alt=""></a>
+            <div>
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+{{-- @endauth --}}
         <a class="login" href="{{ route('login') }}" class="">Login</a>
-</div>
-</nav>
+        </div>
+    </nav>
 <main>
     @yield('content')
 </main>
