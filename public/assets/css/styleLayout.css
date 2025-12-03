@@ -15,9 +15,6 @@ height: 100%;
 background-attachment: fixed;
 
 }
-ul{
-    
-}
 .teste{
 background: linear-gradient(var(--color-primary), var(--color-secondary));
 width: 100%;

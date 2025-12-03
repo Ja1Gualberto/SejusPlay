@@ -45,11 +45,18 @@ class userControler extends Controller
 
         if (Auth::attempt($credenciais)){
             $request->session()->regenerate();
-            return view('myprofile');
+            return redirect()->route('myProfile');
         } else {
             return redirect()->back()->withErrors(['login' => 'Login ou Senha Incorretos'])
             ->withInput();
         }
+    }
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+        return redirect()->route('homePage');
     }
 }
 // class userControler extends Controller
