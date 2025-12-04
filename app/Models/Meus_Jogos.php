@@ -10,14 +10,13 @@ use App\Models\Usuarios;
 class Meus_Jogos extends Model
 {
     protected $table = 'Meus_Jogos';
+    protected $primaryKey = 'id_meus_jogos';
+    public $timestamps = false;
 
     protected $fillable = [
-        'id_meus_jogos',
         'fk_meus_jogos_to_user',
         'fk_meus_jogos_to_jogos',
     ];
-
-    public $timestamps = false;
 
     public function user()
     {

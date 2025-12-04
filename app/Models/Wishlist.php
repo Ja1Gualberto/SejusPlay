@@ -10,14 +10,13 @@ use App\Models\User;
 class Wishlist extends Model
 {
     protected $table = 'Wishlist';
+    protected $primaryKey = 'id_wishlist';
+    public $timestamps = false;
 
     protected $fillable = [
-        'id_wishlist',
         'fk_wishlist_to_user',
         'fk_wishlist_to_jogos',
     ];
-
-    public $timestamps = false;
 
     public function user()
     {

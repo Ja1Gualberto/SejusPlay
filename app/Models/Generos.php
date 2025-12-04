@@ -9,9 +9,10 @@ use App\Models\Jogos;
 class Generos extends Model
 {
     protected $table = 'Generos';
+    protected $primaryKey = 'id_genero';
+    public $timestamps = false;
 
     protected $fillable = [
-        'id_genero',
         'nome_genero'
     ];
 
@@ -20,5 +21,4 @@ class Generos extends Model
         return $this->hasMany(Jogo_genero::class, 'id_genero');
 
     }
-    public $timestamps = false;
 }
