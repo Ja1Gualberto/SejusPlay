@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Generos extends Model
 {
     protected $table = 'Jogos';
+    protected $primaryKey = 'id_jogo';
+    public $timestamps = false;
 
     protected $fillable = [
-        'id_jogo',
         'nome_jogo',
         'valor',
-        'description'
+        'description',
+        'plataforma'
     ];
 
     public function JogosGenero()
@@ -24,6 +26,4 @@ class Generos extends Model
     {
         return $this->hasMany(Wishlist::class, 'id_jogo');
     }
-
-    public $timestamps = false;
 }
