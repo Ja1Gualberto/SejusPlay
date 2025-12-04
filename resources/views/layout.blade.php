@@ -37,9 +37,9 @@
                 <a class="link-layout-profile" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="{{ asset('assets/images/profileicon.png') }}" alt="imageProfile">
                 </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{Route('myProfile')}}">Meu Perfil</a>
-                    <a class="dropdown-item" href="{{ route('logout') }}"
+                <div class="dropdown-menu mt-custom" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item customhover" href="{{Route('myProfile')}}">Meu Perfil</a>
+                    <a class="dropdown-item customhover" href="{{ route('logout') }}"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Sair / Logout
                     </a>

@@ -51,6 +51,23 @@ img{
 .logo{
     margin-left: 5px ;
 }
+.mt-custom{
+    margin-top: 12px !important;
+    padding: 0 !important;
+
+}
+.customhover:hover{
+    background: linear-gradient( var(--color-primary), var(--color-secondary)) !important;
+    color: #fff;
+    border-radius: 3px;
+    /* padding: 0px 0px 0px 5px !important; */
+
+}
+.customhover {
+    transition: all 0.3s ease;
+
+}
+
 .login,.link-layout {
   color: white;
   text-transform: uppercase;
