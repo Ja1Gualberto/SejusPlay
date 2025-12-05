@@ -43,14 +43,4 @@ class sitecontroler extends Controller
     public function registerPage(){
         return view('registerPage');
     }
-
-    public function biblioteca(){
-        return view('Perfil.biblioteca');
-    }
-    public function wishlist(){
-        return view('Perfil.wishlist');
-    }
-    public function baseperfil(){
-        return view('Perfil.basePerfil');
-    }
 }
