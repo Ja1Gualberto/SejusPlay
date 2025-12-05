@@ -8,14 +8,14 @@ use App\Models\Generos;
 class Jogo_genero extends Model
 {
     protected $table = 'Jogo_genero';
+    protected $primaryKey = 'jogo_genero_id';
+    public $timestamps = false;
 
     protected $fillable = [
-        'jogo_genero_id',
         'fk_jogo_genero_to_genero',
         'fk_jogo_genero_to_jogos'
     ];
 
-    public $timestamps = false;
 
     public function genero()
     {

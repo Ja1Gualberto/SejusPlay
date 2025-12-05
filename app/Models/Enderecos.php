@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enderecos extends Model
 {
+    protected $primaryKey = 'id_endereco';
+    public $timestamps = false;
 
         use HasFactory;
 
         protected $table = 'Enderecos';
         protected $fillable = [
-            'id_endereco',
             'rua',
             'bairro',
             'cidade',
@@ -20,7 +21,6 @@ class Enderecos extends Model
             'numero',
             'cep'
         ];
-        public $timestamps = false;
         public function usuario()
     {
         return $this->hasOne(User::class, 'id_endereco', 'user_id');
