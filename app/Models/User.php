@@ -35,6 +35,7 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function endereco()
     {
         return $this->belongsTo(Enderecos::class, 'id_endereco', 'id_endereco');
@@ -47,6 +48,20 @@ class User extends Authenticatable
     {
         return $this->hasMany(Meus_Jogos::class, 'fk_meus_jogos_to_user', 'user_id');
     }
+
+    public function hasGame($id_jogo)
+    {
+        return $this->meus_jogos()
+                    ->where('fk_meus_jogos_to_jogos', $id_jogo)
+                    ->exists();
+    }
+    public function hasInWishlist($id_jogo)
+    {
+        return $this->wishlist()
+                    ->where('fk_wishlist_to_jogos' , $id_jogo)
+                    ->exists();
+    }
+
     public function jogos()
     {
         return $this->meus_jogos()->belongsTo(Jogos::class, 'fk_meus_jogos_to_jogos', 'id_jogo');
