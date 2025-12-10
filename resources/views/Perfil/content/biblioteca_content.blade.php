@@ -4,19 +4,20 @@
     <p class="text-muted">Seus jogos e conteúdos adquiridos</p>
 </div>
 
-    <div class="row row-cols-md-3 ">
+<div class="row row-cols-md-3 ">
 
-        @foreach ($jogos as $jogo)
-        <div class="col-sm-6{{-- col-4  col-lg-4 d-flex align-items-stretch--}}">
+    @foreach ($jogos as $jogo)
+    <div class="col-sm-6">
 
-            <div class="">
-                <x-card-biblioteca :title="$jogo->nome_jogo" :plataform="$jogo->plataforma" :price="$jogo->valor"
-                    :img="$jogo->imagem ?? 'assets/images/defaultGame.jpg'" />
-            </div>
-
+        <div class="">
+            <x-card-biblioteca :title="$jogo->nome_jogo"
+                :plataform="$jogo->plataforma"
+                :price="$jogo->valor"
+                :img="$jogo->imagem ?? 'assets/images/defaultGame.jpg'" />
         </div>
-        @endforeach
 
     </div>
-    </div>
+    @endforeach
+
+</div>
 </section>

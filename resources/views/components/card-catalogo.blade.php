@@ -8,8 +8,7 @@
 'img' => asset('assets/images/defaultGame.jpg'),
 
 ])
-
-<div class="card h-100 border-0 shadow-lg overflow-hidden group-hover-effect mb-3">
+<div class="card h-100 border-0 shadow-sm overflow-hidden group-hover-effect mb-3">
     <div class="position-relative">
         <a href="#">
             <img src="{{ $img }}" class="card-img-top object-fit-cover mx-auto mt-0" style="height: 200px; width: 100%;" alt="{{ $title }}">
@@ -34,13 +33,13 @@
         <div class="mt-auto">
             @if($original_price && $original_price > $price)
                 <small class="text-muted text-decoration-line-through">
-                   R$ {{ number_format($original_price, 2, ',', '.') }}
+                     R$ {{ number_format($original_price, 2, ',', '.') }}
                 </small>
             @endif
 
             <div class="d-flex justify-content-between align-items-center">
                 <span class="h5 mb-0 fw-bold text-success">
-                    R$ {{ number_format($price, 2, ',', '.') }}
+                     R$ {{ number_format($price, 2, ',', '.') }}
                 </span>
 
                 <a href="#" class="btn btn-sm btn-outline-primary rounded-pill px-3">

@@ -15,7 +15,8 @@ class Jogos extends Model
         'nome_jogo',
         'valor',
         'description',
-        'plataforma'
+        'plataforma',
+        'image_path'
     ];
 
     // Desconto automático baseado no valor
@@ -33,6 +34,11 @@ class Jogos extends Model
             return $this->valor - ($this->valor * $this->discount /100);
         }
         return $this->valor;
+    }
+    public function getJogos()
+    {
+        return $this->select('j.*')
+        ->get();
     }
 
     public function JogosGenero()
