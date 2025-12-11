@@ -38,7 +38,7 @@ class adminJogosController extends Controller
         // Upload da imagem para o S3/MinIO
         if ($request->hasFile('image_path')) {
             $filename = time() . '_' . $request->file('image_path')->getClientOriginalName();
-            $path = $request->file('image_path')->storeAs('images', $filename, 's3');
+            $path = $request->file('image_path')->storeAs('/images', $filename, 's3');
             $validated['image_path'] = $path;
         }
 
@@ -79,7 +79,7 @@ class adminJogosController extends Controller
             $filename = $jogo->id_jogo . '_' . $request->file('image_path')->getClientOriginalName();
 
             // Faz upload usando o nome original
-            $path = $request->file('image_path')->storeAs('images', $filename, 's3');
+            $path = $request->file('image_path')->storeAs('/images', $filename, 's3');
 
             $validated['image_path'] = $path;
         }
