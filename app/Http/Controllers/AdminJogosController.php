@@ -42,6 +42,17 @@ class adminJogosController extends Controller
             $validated['image_path'] = $path;
         }
 
+        // Verifica se o campo estar vazio para aplicar ou não desconto automático
+        if (empty($validated['discount'])) {
+            if ($validated['valor'] >= 100) {
+                $validated['discount'] = 20;
+            } elseif ($validated['valor'] >= 50) {
+                $validated['discount'] = 10;
+            } else {
+                $validated['discount'] = 0;
+            }
+        }
+
         Jogos::create($validated);
 
         return redirect()->route('admin.jogos.index')->with('success', 'Jogo adicionado com sucesso!');
@@ -78,6 +89,17 @@ class adminJogosController extends Controller
             $path = $request->file('image_path')->storeAs('/images', $filename, 's3');
 
             $validated['image_path'] = $path;
+        }
+
+        // Verifica se o campo estar vazio para aplicar ou não desconto automático
+        if (empty($validated['discount'])) {
+            if ($validated['valor'] >= 100) {
+                $validated['discount'] = 20;
+            } elseif ($validated['valor'] >= 50) {
+                $validated['discount'] = 10;
+            } else {
+                $validated['discount'] = 0;
+            }
         }
 
         $jogo->update($validated);

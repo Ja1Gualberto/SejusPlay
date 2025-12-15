@@ -22,20 +22,6 @@ class Jogos extends Model
         'image_path'
     ];
 
-    // Desconto automático baseado no valor
-    public function getDiscountAttribute()
-    {
-        // Desconto defindo por Admin
-        if (!is_null($this->attributes['discount'])) {
-            return $this->attributes['discount'];
-        }
-
-        // Desconto automático padrão
-        if ($this->valor >= 100) return 20;
-        if ($this->valor >= 50) return 10;
-        return null;
-    }
-
     // Preço final já com desconto aplicado
     public function getFinalPriceAttribute()
     {
