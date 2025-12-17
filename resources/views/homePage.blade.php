@@ -27,46 +27,67 @@
                             {{-- Banner Principal --}}
                             <div class="col-md-8 ">
                                 <div class="rounded-5">
-                                    <img src="{{ $jogo->imagem }}" class="img-fluid rounded-3 w-100 h-100 object-fit-cover" alt="{{ $jogo->nome_jogo }}">
+                                    <a href="{{ route('jogo.show', $jogo->id_jogo) }}">
+                                        <img src="{{ $jogo->imagem }}" class="img-fluid rounded-3 w-100 h-100 object-fit-cover" alt="{{ $jogo->nome_jogo }}">
+                                    </a>
                                 </div>
-                                <div class="carousel-caption  bg-opacity-100 rounded p-3">
-                                    <h5 class="text-white fw-bold">{{ $jogo->nome_jogo }}</h5>
+                                <div class="carousel-caption  bg-opacity-100 rounded p-3 text-start">
+                                    <h5 class="text-white fw-bold fs-3">{{ $jogo->nome_jogo }}</h5>
 
                                     <div class="d-flex align-items-center gap-2">
                                         {{-- Caixa Vemelha % desconto --}}
-                                        <span class="badge bg-danger fs-6 shadow-sm">-{{ $jogo->discount }}%</span>
+                                        <span class="badge bg-danger fs-5 shadow-sm">-{{ $jogo->discount }}%</span>
 
                                         {{-- Preços empilhados --}}
                                         <div class="d-flex flex-column">
-                                            <span class="text-white text-decoration-line-through small">R$ {{ number_format($jogo->valor, 2, ',', '.') }}</span>
-                                            <span class="fw-bold text-white fs-5">R$ {{ number_format($jogo->final_price, 2, ',', '.') }}</span>
+                                            <span class="text-white text-decoration-line-through fs-7">R$ {{ number_format($jogo->valor, 2, ',', '.') }}</span>
+                                            <span class="fw-bold text-white fs-4">R$ {{ number_format($jogo->final_price, 2, ',', '.') }}</span>
                                         </div>
-                                        <a href="{{ route('homePage') }}" class="btn btn-primary">Ver promoção</a>
                                     </div>
-
                                 </div>
                             </div>
 
                             {{-- Dois banners menores à direita --}}
                             <div class="col-md-4 d-flex flex-column gap-4">
-                                <img src="{{ $jogo->imagem }}" class="img-fluid rounded object-fit-cover flex-fill" alt="Promo extra 1">
-                                <img src="{{ $jogo->imagem }}" class="img-fluid rounded object-fit-cover flex-fill" alt="Promo extra 2">
+                                <div class="position-relative flex-fill">
+                                    <img src="{{ $jogo->imagem }}" class="img-fluid rounded object-fit-cover flex-fill" alt="Promo extra 1">
+                                    <div class="position-absolute bottom-0 text-white small-banner-caption">
+                                        <h6 class="fw-bold mb-1">{{ $jogo->nome_jogo }}</h6>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="badge bg-danger">-{{ $jogo->discount }}%</span>
+                                            <span class="fw-bold text-white fs-4">R$ {{ number_format($jogo->final_price, 2, ',', '.') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="position-relative flex-fill">
+                                    <img src="{{ $jogo->imagem }}" class="img-fluid rounded object-fit-cover flex-fill" alt="Promo extra 2">
+                                    <div class="position-absolute bottom-0 text-white small-banner-caption">
+                                        <h6 class="fw-bold mb-1">{{ $jogo->nome_jogo }}</h6>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <span class="badge bg-danger">-{{ $jogo->discount }}%</span>
+                                            <span class="fw-bold text-white fs-4">R$ {{ number_format($jogo->final_price, 2, ',', '.') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
 
-          {{-- Botões voltar e avançar --}}
-          <button class="carousel-control-prev ms-2" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon me-3" class="icon icon-left"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
+            <div class="col-1">
+                <button class="carousel-control-prev" type="button" data-bs-target="#promoCarousel" data-bs-slide="prev" >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M201.4 297.4C188.9 309.9 188.9 330.2 201.4 342.7L361.4 502.7C373.9 515.2 394.2 515.2 406.7 502.7C419.2 490.2 419.2 469.9 406.7 457.4L269.3 320L406.6 182.6C419.1 170.1 419.1 149.8 406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3L201.3 297.3z"/></svg>
+                </button>
+            </div>
+            <div class="col-1">
+                <button class="carousel-control-next" type="button" data-bs-target="#promoCarousel" data-bs-slide="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M439.1 297.4C451.6 309.9 451.6 330.2 439.1 342.7L279.1 502.7C266.6 515.2 246.3 515.2 233.8 502.7C221.3 490.2 221.3 469.9 233.8 457.4L371.2 320L233.9 182.6C221.4 170.1 221.4 149.8 233.9 137.3C246.4 124.8 266.7 124.8 279.2 137.3L439.2 297.3z"/></svg>
+                </button>
+            </div>
         </div>
     </section>
-
 
     {{-- Exibição dos Jogos em Cards --}}
     <section class="container my-5">
