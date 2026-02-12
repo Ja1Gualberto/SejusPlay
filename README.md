@@ -39,8 +39,8 @@ Para rodar este projeto localmente, siga os passos abaixo:
     composer install
 
 3. **Configure o arquivo .env**
-   *Copie o arquivo de exemplo: cp .env.example .env
-   *Configure as credenciais do **MySQL** no arquivo .env
+   * Copie o arquivo de exemplo: cp .env.example .env
+   * Configure as credenciais do **MySQL** no arquivo .env
 
 4. **Gere a chave da aplicação**
    ```bash
