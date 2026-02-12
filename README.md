@@ -76,6 +76,6 @@ Este é um projeto com o intuito de aprendizado, mas sinta-se á vontade para ab
 
 ---
 **Desenvolvido por:**
-[João Gualberto](https://github.com/Ja1Gualberto)
+[João Gualberto](https://github.com/Ja1Gualberto) e
 [Ricardo Prestes](https://github.com/ricardopmartins)
 ---
