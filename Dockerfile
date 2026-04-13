@@ -1,4 +1,4 @@
-FROM php:8.2-fpm-alpine
+FROM php:8.2.9-apache
 
 # Instala dependências do sistema
 RUN apk add --no-cache bash\
