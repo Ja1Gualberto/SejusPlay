@@ -1,59 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎮 SejusPlay
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+O **SejusPlay** é uma plataforma web voltada para o catálogo de jogos com temática policial e de tiro. Este projeto nasceu como um ambiente de laboratório para consolidar conhecimentos técnicos em desenvolvimento Full Stack antes da entrada em projetos de nível profissional.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🚀 Sobre o Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+O objetivo principal foi aplicar na prática os conceitos de desenvolvimento web utilizando o framework Laravel, integrando o backend com um banco de dados robusto e criando uma interface amigável e responsiva.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🛠️ Tecnologias Utilizadas
 
-## Learning Laravel
+* **Backend:** [Laravel](https://laravel.com/) (PHP)
+* **JavaScript**
+* **Banco de Dados:** MySQL
+* **Frontend:** Bootstrap 5, CSS3 e HTML5
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📌 Funcionalidades
 
-## Laravel Sponsors
+* **Catálogo Temático:** Exibição de jogos focados em ação e simulação policial.
+* **Arquitetura MVC:** Organização de código seguindo os padrões do Laravel.
+* **Interface Responsiva:** Estilização adaptada para dispositivos móveis e desktop.
+* **Gestão de Dados:** CRUD e persistência de informações via MySQL.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🔧 Instalação e Execução
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Para rodar este projeto localmente, siga os passos abaixo:
 
-## Contributing
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/Ja1Gualberto/SejusPlay.git](https://github.com/Ja1Gualberto/SejusPlay.git)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Instale as dependencias do Composer:**
+    ```bash
+    composer install
 
-## Code of Conduct
+3. **Configure o arquivo .env**
+   * Copie o arquivo de exemplo: cp .env.example .env
+   * Configure as credenciais do **MySQL** no arquivo .env
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Gere a chave da aplicação**
+   ```bash
+   php artisan key:generate
 
-## Security Vulnerabilities
+5. **Rode as Migrations:**(Opicional, no projeto original foi feito "na mão")
+   ```bash
+   php artisan migrate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Inicie o servidor local:**
+   ```bash
+   php artisan serve
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🎯 Objetivo de Estudo
+
+Este repositório documenta a evolução técnica nos seguintes tópicos:
+
+   1. Estruturação de projetos seguindo o padrão MVC.
+
+    2. Relacionamento de tabelas no MySQL.
+
+    3. Uso de Blade Engines para reaproveitamento de componentes frontend.
+
+    4. Consumo e exibição de dados dinâmicos.
+
+---
+
+## 🤝 Contribuição
+
+Este é um projeto com o intuito de aprendizado, mas sinta-se á vontade para abrir uma issue ou enviar um pull request com melhorias
+
+---
+**Desenvolvido por:**
+[João Gualberto](https://github.com/Ja1Gualberto) e
+[Ricardo Prestes](https://github.com/ricardopmartins)
+---
